@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form onsubmit="return formvalidation()">
+		name:
+		<input type="text" name="" placeholder="enter name" id="name">
+		<span id="message"></span>
+		<br><br> 
+		password:
+		<input type="password" name="" placeholder="enter password" id="password">
+		<span id="message1"></span><br><br>
+		confirm password:
+		<input type="password" name="" placeholder="confirm your password" id="confirmpassword">
+		<span id="confirm"></span><br><br>
+		
+		<button type="submit">submit</button>
+	</form>
+
+
+	<script type="text/javascript">
+		
+		function formvalidation() {
+			var a = document.getElementById('name').value;
+			var b = document.getElementById('password').value;
+            var c = document.getElementById('confirmpassword').value;
+
+
+			if(a == ""){
+				document.getElementById('message').innerHTML = "plz fill the name field";
+				return false;
+			}
+			if ((a.length <= 2) || (a.length > 20)) {
+				document.getElementById('message').innerHTML = "name length must be b/w 2 and 20"; 
+				return false;
+			}
+			if (!isNaN(a)) {
+                document.getElementById('message').innerHTML = "sahi naam dalo"; 
+				return false;
+			}
+			if(b == ""){
+				document.getElementById('message1').innerHTML = "plz fill the password field";
+				return false;
+			}
+			if ((b.length <= 5) || (b.length > 20)) {
+				document.getElementById('message1').innerHTML = "password length must be b/w 5 and 20"; 
+				return false;
+			}
+			if (b!=c){
+				document.getElementById('confirm').innerHTML = "password does not match the confirm password"; 
+				return false;
+			}
+			if(c == ""){
+				document.getElementById('confirm').innerHTML = "enter this field to confirm your password";
+				return false;
+			}
+		}
+	</script>
+  
+</body>
+</html>
