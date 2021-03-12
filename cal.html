@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+.formstyle{
+ width:250px;
+ height:287px;
+ margin:auto;
+ border:2px solid black;
+}
+
+input{
+ width:80px;
+ height:40px;
+ background-color:green;
+ font-size:30px;
+ color:white;
+ border-bottom:1px solid black;
+
+}
+#finalanswer{
+ width:250px;
+}
+#clearbutton{
+ width:250px;
+}
+</style>
+</head>
+<body>
+	<div class="form_style">
+		<form name="form">
+			<input type="text" name="answers" id="finalanswer">
+			<br>
+
+			<input type="button" onclick="form.answers.value +='1'" name="" id="" value="1">
+			<input type="button" onclick="form.answers.value +='2'" name="" id="" value="2">
+			<input type="button" onclick="form.answers.value +='3'" name="" id="" value="3">
+			<br>
+            <input type="button" onclick="form.answers.value +='4'" name="" id="" value="4">
+            <input type="button" onclick="form.answers.value +='5'" name="" id="" value="5">
+            <input type="button" onclick="form.answers.value +='6'" name="" id="" value="6">
+            <br>
+            <input type="button" onclick="form.answers.value +='7'" name="" id="" value="7">
+            <input type="button" onclick="form.answers.value +='8'" name="" id="" value="8">
+            <input type="button" onclick="form.answers.value +='9'" name="" id="" value="9">
+            <br>
+            <input type="button" onclick="form.answers.value +='+'" name="" id="" value="+">
+            <input type="button" onclick="form.answers.value +='-'" name="" id="" value="-">
+            <input type="button" onclick="form.answers.value +='/'" name="" id="" value="/">
+            <br>
+            <input type="button" onclick="form.answers.value +='0'" name="" id="" value="0">
+            <input type="button" onclick="form.answers.value +='*'" name="" id="" value="*">
+            <input type="button" onclick="form.answers.value =eval(form.answers.value)" name="" id="" value="=">
+            <br>
+            <input type="button" onclick="form.answers.value=''" id="clearbutton" name="" value="cleanall">
+
+
+
+		</form>
+	</div>
+
+</body>
+</html>
